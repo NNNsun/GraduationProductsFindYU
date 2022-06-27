@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoadActivity">
+
+    <com.naver.maps.map.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </com.naver.maps.map.MapView>
+
+    <!-- 상단바 배경 -->
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="470dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/roadres_topbox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="710dp">
+    </ImageView>
+
+
+    <!-- 출발지 검색바 배경-->
+    <ImageView
+        android:layout_width="276dp"
+        android:layout_height="40dp"
+        android:gravity="left|center_vertical"
+        android:background="@drawable/roadres_searchbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 출발지 검색바 -->
+    <Button
+        android:id="@+id/src_search"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:gravity="left|center_vertical"
+        android:background="#00ff0000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"/>
+
+    <!-- 목적지지 검색바 배경-->
+    <ImageView
+        android:layout_width="276dp"
+        android:layout_height="40dp"
+        android:gravity="left|center_vertical"
+        android:background="@drawable/roadres_searchbar"
+        app:layout_constraintTop_toBottomOf="@id/src_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp" />
+
+    <!-- 목적지 검색바 -->
+    <Button
+        android:id="@+id/dst_search"
+        android:layout_width="260dp"
+        android:layout_height="36dp"
+        android:gravity="left|center_vertical"
+        android:background="#00ff0000"
+        app:layout_constraintTop_toBottomOf="@id/src_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"/>
+
+    <!-- 취소 버튼 -->
+    <ImageButton
+        android:id="@+id/exit_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00ff0000"
+        android:src="@drawable/result_cancel"
+        app:layout_constraintStart_toEndOf="@id/src_search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- 더보기 버튼 -->
+    <ImageButton
+        android:id="@+id/detail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00ff0000"
+        android:src="@drawable/roadres_detail"
+        app:layout_constraintStart_toEndOf="@id/dst_search"
+        app:layout_constraintTop_toBottomOf="@id/exit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- 출발지, 목적지 교환 버튼 -->
+    <ImageButton
+        android:id="@+id/change"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00ff0000"
+        android:src="@drawable/roadres_change"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/topBar"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="42dp"/>
+
+    <!-- 도보 버튼 -->
+    <ImageButton
+        android:id="@+id/walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#00ff0000"
+        android:gravity="left|center_vertical"
+        android:scaleType="fitCenter"
+        android:src="@drawable/roadres_walk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dst_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="88dp"
+        android:layout_marginTop="13dp"/>
+
+    <!-- 버스 버튼 -->
+    <ImageButton
+        android:id="@+id/bus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#00ff0000"
+        android:gravity="left|center_vertical"
+        android:scaleType="fitCenter"
+        android:src="@drawable/roadres_bus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dst_search"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="13dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
