@@ -262,8 +262,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                         Marker marker = new Marker();
                         marker.setIcon(OverlayImage.fromResource(R.drawable.marker_cafe));
                         marker.setPosition(ll);
-                        marker.setWidth(135);
-                        marker.setHeight(160);
+                        marker.setWidth(113);
+                        marker.setHeight(150);
                         markerList.add(marker);
                     }
                     for (Marker m : markerList)
@@ -330,8 +330,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                     for (LatLng ll : convList.getList()) {
                         Marker marker = new Marker();
                         marker.setIcon(OverlayImage.fromResource(R.drawable.marker_convenience));
-                        marker.setWidth(135);
-                        marker.setHeight(160);
+                        marker.setWidth(113);
+                        marker.setHeight(150);
                         marker.setPosition(ll);
                         markerList.add(marker);
                     }
@@ -367,8 +367,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                     for (LatLng ll : pressList.getList()) {
                         Marker marker = new Marker();
                         marker.setIcon(OverlayImage.fromResource(R.drawable.marker_pressrom));
-                        marker.setWidth(135);
-                        marker.setHeight(160);
+                        marker.setWidth(113);
+                        marker.setHeight(150);
                         marker.setPosition(ll);
                         markerList.add(marker);
                     }
@@ -403,8 +403,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                     for (LatLng ll : libraryList.getList()) {
                         Marker marker = new Marker();
                         marker.setIcon(OverlayImage.fromResource(R.drawable.marker_college));
-                        marker.setWidth(135);
-                        marker.setHeight(160);
+                        marker.setWidth(113);
+                        marker.setHeight(150);
                         marker.setPosition(ll);
                         markerList.add(marker);
                     }
