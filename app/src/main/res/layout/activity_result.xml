@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <com.naver.maps.map.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </com.naver.maps.map.MapView>
+
+    <!-- 상단바 배경 -->
+    <ImageView
+        android:id="@+id/topBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/result_topbox"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <!-- 상단바 내용 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="@id/topBar"
+        android:layout_marginBottom="12dp">
+
+        <!-- 뒤로가기 버튼 -->
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="#00ff0000"
+            android:src="@drawable/result_prev"/>
+
+        <!-- 검색바 버튼 -->
+        <Button
+            android:id="@+id/search_bar"
+            android:layout_width="280dp"
+            android:layout_height="54dp"
+            android:background="#00ff0000"
+            android:gravity="left|center_vertical"/>
+
+        <!-- 취소 버튼 -->
+        <ImageButton
+            android:id="@+id/exit_button"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="#00ff0000"
+            android:src="@drawable/result_cancel" />
+    </LinearLayout>
+
+    <!-- 하단바 배경 -->
+    <ImageView
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/result_bottom"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </ImageView>
+
+    <!-- 장소 명칭 -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/bottom"
+        app:layout_constraintTop_toTopOf="@id/bottom"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        android:textStyle="bold"
+        android:textColor="#1A59FF"
+        android:textSize="16sp"
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_marginStart="32dp"/>
+
+    <!-- 장소 설명(주소) -->
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/line"
+        android:text="경북 경산시 대학로 280"
+        android:textSize="14sp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="32dp"/>
+
+    <!-- 구분선 -->
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="388dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/bottom"
+        app:layout_constraintEnd_toEndOf="@id/bottom"
+        app:layout_constraintTop_toTopOf="@id/bottom"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        android:src="@drawable/line"
+        app:layout_constraintVertical_bias="0.7"/>
+
+    <!-- 북마크 버튼
+    <ImageButton
+        android:id="@+id/bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="#00ff0000"
+        android:src="@drawable/result_bookmark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="24dp"/> -->
+
+    <!-- 출발 버튼 -->
+    <ImageButton
+        android:id="@+id/src_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff0000"
+        android:src="@drawable/result_src"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintEnd_toStartOf="@id/dst_button"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="12dp"/>
+
+    <!-- 도착 버튼 -->
+    <ImageButton
+        android:id="@+id/dst_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff0000"
+        android:src="@drawable/result_dst"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
