@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapFragment">
+
+    <com.naver.maps.map.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+
+    </com.naver.maps.map.MapView>
+
+    <com.naver.maps.map.widget.LocationButtonView
+        android:id="@+id/location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/searchbar_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="73dp"
+        android:background="@drawable/rounded"
+        android:elevation="5dp"
+        android:gravity="center"
+
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/searchPlace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+
+            android:drawableLeft="@drawable/ic_search" />
+
+        <ImageButton
+            android:id="@+id/searchImage"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="#00ff0000"
+            android:src="@drawable/ic_camera" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchbar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:layout_marginTop="15dp"
+
+        android:elevation="5dp"
+        android:gravity="center"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/searchbar_1"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/searchRoad"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.2"
+
+            android:adjustViewBounds="true"
+
+            android:background="#00ff0000"
+
+            android:src="@drawable/btn_directions"
+
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/logo_main"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="13dp"
+        />
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/searchbar_2"
+        app:layout_constraintStart_toStartOf="@+id/searchbar_1"
+        app:layout_constraintTop_toBottomOf="@+id/searchbar_1"
+        app:singleLine="true">
+
+        <!--        <com.google.android.material.chip.Chip-->
+        <!--            android:id="@+id/chip_cafe"-->
+        <!--            style="@style/Widget.MaterialComponents.Chip.Action"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="카페"-->
+        <!--            app:chipBackgroundColor="@color/white"-->
+        <!--            app:chipIcon="@drawable/ic_chip_cafe"-->
+        <!--            app:chipIconSize="0dp"-->
+        <!--            app:chipIconVisible="true" />-->
+
+        <!--        <com.google.android.material.chip.Chip-->
+        <!--            android:id="@+id/chip2"-->
+        <!--            style="@style/Widget.MaterialComponents.Chip.Action"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="편의점"-->
+        <!--            app:chipBackgroundColor="@color/white"-->
+        <!--            app:chipIcon="@drawable/ic_chip_convenience"-->
+        <!--            app:chipIconSize="0dp"-->
+        <!--            app:chipIconVisible="true" />-->
+
+        <!--        <com.google.android.material.chip.Chip-->
+        <!--            android:id="@+id/chip3"-->
+        <!--            style="@style/Widget.MaterialComponents.Chip.Action"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="화장실"-->
+        <!--            app:chipBackgroundColor="@color/white"-->
+        <!--            app:chipIcon="@drawable/ic_chip_restroom"-->
+        <!--            app:chipIconSize="0dp"-->
+        <!--            app:chipIconVisible="true" />-->
+
+        <!--        <com.google.android.material.chip.Chip-->
+        <!--            android:id="@+id/chip4"-->
+        <!--            style="@style/Widget.MaterialComponents.Chip.Action"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="인쇄실"-->
+        <!--            app:chipBackgroundColor="@color/white"-->
+        <!--            app:chipIcon="@drawable/ic_chip_restroom"-->
+        <!--            app:chipIconSize="0dp"-->
+        <!--            app:chipIconVisible="true" />-->
+
+        <!--        <com.google.android.material.chip.Chip-->
+        <!--            android:id="@+id/chip5"-->
+        <!--            style="@style/Widget.MaterialComponents.Chip.Action"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="etc"-->
+        <!--            app:chipBackgroundColor="@color/white"-->
+        <!--            app:chipIcon="@drawable/ic_chip_etc"-->
+        <!--            app:chipIconSize="0dp"-->
+        <!--            app:chipIconVisible="true" />-->
+
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!--시작-->
+    <HorizontalScrollView
+        android:id="@+id/hs_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="@id/searchbar_1"
+        app:layout_constraintTop_toBottomOf="@id/searchbar_1">
+
+
+
+
+    </HorizontalScrollView>
+    <!--끝-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
